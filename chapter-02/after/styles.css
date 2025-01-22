@@ -13,7 +13,40 @@ main {
   display : grid;
   margin: 24px;
   grid-template-columns: repeat(2, minmax(auto, 1fr)) 250px;
+  grid-template-areas : "header header header"
+                        "content content author"
+                        "content content aside"
+                        "plays . aside"
+                        "footer footer footer";
 }
+
+/** Grid areas */
+
+header {
+  grid-area : header
+}
+
+article {
+  grid-area : content
+}
+
+section.author-details {
+  grid-area : author
+}
+
+section.plays {
+  grid-area : plays
+}
+
+aside {
+  grid-area : aside
+}
+
+footer {
+  grid-area : footer
+}
+
+
 
 img { 
   float: left; 
